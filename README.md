@@ -9,7 +9,7 @@ Site estático de uma página para findezagencia.com.br, publicado pelo GitHub P
 - robots.txt, sitemap.xml, llms.txt — arquivos para buscadores e IAs
 - CNAME — domínio do GitHub Pages (findezagencia.com.br)
 - fonts/ — fontes hospedadas no próprio site
-- imagens da marca: logo-emblema.webp (e .png para o Google), logo-findez.webp, banner-findez.webp, og-image.jpg, apple-touch-icon.png, favicon.svg (os .jpg do banner e da logo ficam como reserva)
+- imagens da marca: logo-emblema.webp, logo-findez-512.png (logo para o Google), favicon.ico e favicon-192.png (ícone que aparece na busca do Google), logo-findez.webp, banner-findez.webp, og-image.jpg, apple-touch-icon.png, favicon.svg (os .jpg do banner e da logo ficam como reserva)
 - Fotos ilustrativas carregadas do Unsplash (licença gratuita do Unsplash)
 
 ## Publicar (GitHub, pelo navegador)
