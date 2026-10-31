@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modelo de site para clínica de estética | Findez</title>
+<meta name="description" content="Modelo de demonstração da Findez: site de uma página para clínica de estética, com tratamentos, primeira avaliação, horário, mapa e agendamento pelo WhatsApp. Negócio e dados fictícios.">
+<!-- MODELO da Findez: negócio fictício, não indexar -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#4f6b5c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%234f6b5c'/%3E%3Cpath d='M32 16c6 8 6 18 0 30-6-12-6-22 0-30Z' fill='%23f4efe6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --salvia:#4f6b5c; --salvia-esc:#344a3e; --salvia-clara:#dfe7df; --areia:#f4efe6; --off:#fbf9f5;
+  --texto:#2c3530; --suave:#6b746e; --linha:#e3ddd1; --zap:#1fa855; --estrela:#d9a33a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--texto);background:var(--off);line-height:1.65;font-size:16px}
+img,svg{display:block;max-width:100%}
+a{color:var(--salvia)}
+h1,h2,h3{font-family:Marcellus,Georgia,serif;font-weight:400;line-height:1.15;color:var(--salvia-esc)}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.modelo{background:#D4AF37;color:#0B0B0B;font-size:.8rem;text-align:center;padding:7px 16px;font-weight:600}
+.modelo a{color:#0B0B0B}
+.rotulo{display:block;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;font-weight:600;color:var(--salvia);margin-bottom:10px}
+
+/* topo */
+header{position:sticky;top:0;z-index:20;background:rgba(251,249,245,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
+.topo{display:flex;align-items:center;justify-content:space-between;height:64px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--salvia-esc)}
+.marca svg{width:34px;height:34px}
+.marca b{font-family:Marcellus,serif;font-weight:400;font-size:1.35rem;letter-spacing:.04em}
+nav ul{display:none;list-style:none;gap:26px}
+nav a{text-decoration:none;color:var(--texto);font-size:.95rem}
+nav a:hover{color:var(--salvia)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 24px;border-radius:999px;font-weight:600;font-size:.98rem;text-decoration:none;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-zap{background:var(--zap);color:#fff}
+.btn-zap:hover{background:#178f47}
+.btn-linha{border:1.5px solid var(--salvia);color:var(--salvia-esc)}
+.btn-linha:hover{background:var(--salvia);color:#fff}
+.btn svg{width:20px;height:20px;fill:currentColor}
+.topo .btn{padding:9px 16px;font-size:.88rem}
+
+/* abertura */
+.hero{background:var(--areia);padding:52px 0 64px}
+.hero .wrap{display:grid;gap:36px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,7vw,3.6rem);margin-bottom:16px}
+.hero .lead{font-size:1.08rem;color:#4a534d;max-width:500px;margin-bottom:26px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.selos{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;list-style:none}
+.selos li{background:#fff;border:1px solid var(--linha);border-radius:999px;padding:6px 14px;font-size:.85rem;color:var(--suave)}
+.selos b{color:var(--salvia-esc)}
+.foto{position:relative;max-width:440px;width:100%;justify-self:center}
+.foto img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px}
+.foto::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1.5px solid var(--salvia);border-radius:24px;z-index:-1}
+.foto{isolation:isolate}
+
+/* seções */
+section{padding:76px 0}
+.titulo{max-width:620px;margin-bottom:40px}
+.titulo h2{font-size:clamp(1.9rem,5vw,2.6rem);margin-bottom:10px}
+.titulo p{color:var(--suave)}
+
+/* tratamentos */
+.tratamentos{display:grid;gap:16px}
+.trat{background:#fff;border:1px solid var(--linha);border-radius:20px;padding:26px 24px;display:flex;flex-direction:column;gap:8px}
+.trat .num{font-family:Marcellus,serif;color:var(--salvia);font-size:.95rem;letter-spacing:.1em}
+.trat h3{font-size:1.45rem}
+.trat p{color:var(--suave);font-size:.96rem}
+.trat .dur{margin-top:auto;padding-top:10px;font-size:.85rem;color:var(--salvia-esc);font-weight:600}
+
+/* primeira visita */
+.visita{background:var(--salvia-esc);color:#e6ece6}
+.visita h2{color:#fff}
+.visita .rotulo{color:#b9cbbd}
+.visita .titulo p{color:#c4d0c6}
+.passos{display:grid;gap:16px;list-style:none;counter-reset:p}
+.passos li{counter-increment:p;border-top:1px solid rgba(255,255,255,.18);padding-top:18px}
+.passos li::before{content:"0" counter(p);font-family:Marcellus,serif;font-size:1.6rem;color:#b9cbbd;display:block;margin-bottom:6px}
+.passos b{display:block;color:#fff;font-size:1.05rem;margin-bottom:4px}
+.aviso{margin-top:34px;font-size:.88rem;color:#b9cbbd;max-width:640px}
+
+/* avaliações */
+.avals{display:grid;gap:16px}
+.aval{background:var(--areia);border-radius:20px;padding:24px}
+.aval .estrelas{color:var(--estrela);letter-spacing:2px}
+.aval p{margin:10px 0 14px;font-size:1rem}
+.aval small{color:var(--suave)}
+.obs{margin-top:20px;font-size:.88rem;color:var(--suave)}
+
+/* local */
+.local{background:#fff}
+.local .grade{display:grid;gap:24px}
+.info{display:grid;gap:22px}
+.info b{display:block;font-family:Marcellus,serif;font-weight:400;font-size:1.2rem;color:var(--salvia-esc);margin-bottom:4px}
+.horas{width:100%;border-collapse:collapse;font-size:.95rem}
+.horas td{padding:6px 0;border-bottom:1px solid var(--linha)}
+.horas td:last-child{text-align:right}
+.horas .fechado td:last-child{color:var(--suave)}
+.mapa{border-radius:20px;overflow:hidden;border:1px solid var(--linha);min-height:320px;background:var(--areia)}
+.mapa iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+
+/* chamada final */
+.final{text-align:center;background:var(--areia)}
+.final h2{font-size:clamp(1.9rem,5vw,2.6rem);margin-bottom:10px}
+.final p{max-width:520px;margin:0 auto 26px;color:var(--suave)}
+
+footer{background:var(--salvia-esc);color:#c4d0c6;padding:40px 0 100px;text-align:center;font-size:.9rem}
+footer .marca{justify-content:center;color:#fff;margin-bottom:10px}
+footer a{color:#fff}
+
+.zap-fixo{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;background:var(--zap);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.zap-fixo svg{width:30px;height:30px;fill:#fff}
+
+@media (min-width:760px){
+  nav ul{display:flex}
+  .hero{padding:80px 0 90px}
+  .hero .wrap{grid-template-columns:1.1fr .9fr}
+  .tratamentos{grid-template-columns:1fr 1fr}
+  .passos{grid-template-columns:repeat(3,1fr);gap:28px}
+  .avals{grid-template-columns:repeat(3,1fr)}
+  .local .grade{grid-template-columns:.9fr 1.1fr;gap:40px}
+  section{padding:96px 0}
+  footer{padding-bottom:40px}
+}
+@media (min-width:1000px){.tratamentos{grid-template-columns:repeat(4,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+:focus-visible{outline:3px solid var(--salvia);outline-offset:3px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3 1 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></symbol>
+  <symbol id="folha" viewBox="0 0 40 40"><path d="M20 5c7 9 7 20 0 31-7-11-7-22 0-31Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 12v24" stroke="currentColor" stroke-width="1.5"/></symbol>
+</svg>
+
+<div class="modelo">Modelo de demonstração da Findez · negócio e dados fictícios · <a href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Vi%20o%20modelo%20de%20site%20para%20cl%C3%ADnica%20de%20est%C3%A9tica%20e%20quero%20um%20assim%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero um site assim</a></div>
+
+<header>
+  <div class="wrap topo">
+    <a class="marca" href="#inicio" aria-label="Espaço Lótus, início"><svg aria-hidden="true"><use href="#folha"/></svg><b>Espaço Lótus</b></a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#primeira-visita">Primeira visita</a></li>
+        <li><a href="#local">Horário e endereço</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-zap" href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Vi%20o%20modelo%20de%20site%20para%20cl%C3%ADnica%20de%20est%C3%A9tica%20e%20quero%20um%20assim%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Agendar</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <span class="rotulo">Estética facial e corporal · Saúde, São Paulo</span>
+      <h1>Um tempo para cuidar de você</h1>
+      <p class="lead">Limpeza de pele, drenagem, massagem e sobrancelhas num espaço calmo, com atendimento individual e hora marcada.</p>
+      <div class="acoes">
+        <a class="btn btn-zap" href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Vi%20o%20modelo%20de%20site%20para%20cl%C3%ADnica%20de%20est%C3%A9tica%20e%20quero%20um%20assim%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Agendar avaliação</a>
+        <a class="btn btn-linha" href="#tratamentos">Ver tratamentos</a>
+      </div>
+      <ul class="selos">
+        <li><b>4,9</b> no Google (exemplo)</li>
+        <li>Perto do metrô</li>
+        <li>Atendimento individual</li>
+      </ul>
+    </div>
+    <div class="foto"><img src="https://images.unsplash.com/photo-1713085085470-fba013d67e65?auto=format&fit=crop&w=600&h=750&q=70" alt="Profissional fazendo um procedimento de estética facial" width="600" height="750"></div>
+  </div>
+</section>
+
+<section id="tratamentos">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="rotulo">Tratamentos</span>
+      <h2>Escolha o seu cuidado</h2>
+      <p>Cada tratamento começa com uma conversa para entender o que você procura.</p>
+    </div>
+    <div class="tratamentos">
+      <article class="trat"><span class="num">01</span><h3>Limpeza de pele</h3><p>Higienização profunda, extração e hidratação, de acordo com o seu tipo de pele.</p><span class="dur">Cerca de 1h30</span></article>
+      <article class="trat"><span class="num">02</span><h3>Drenagem linfática</h3><p>Massagem com movimentos leves e ritmados, para uma sensação de leveza.</p><span class="dur">Cerca de 1h</span></article>
+      <article class="trat"><span class="num">03</span><h3>Massagem relaxante</h3><p>Pressão sob medida e óleos aromáticos para aliviar a tensão do dia a dia.</p><span class="dur">Cerca de 1h</span></article>
+      <article class="trat"><span class="num">04</span><h3>Design de sobrancelhas</h3><p>Desenho pensado para o formato do seu rosto, com ou sem henna.</p><span class="dur">Cerca de 40 min</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="primeira-visita">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="rotulo">Primeira visita</span>
+      <h2>Como funciona</h2>
+      <p>Sem pressa e sem pacote empurrado: você decide depois de conversar.</p>
+    </div>
+    <ol class="passos">
+      <li><b>Chame no WhatsApp</b>Conte o que você procura e escolha um horário.</li>
+      <li><b>Avaliação</b>Conversamos sobre a sua pele, seus hábitos e o que você espera.</li>
+      <li><b>Seu plano de cuidado</b>Indicamos o tratamento e a frequência, com valores claros.</li>
+    </ol>
+    <p class="aviso">Na página de cada cliente, a Findez evita promessas de resultado e inclui o registro profissional do responsável quando a profissão exige.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="titulo">
+      <span class="rotulo">Avaliações no Google</span>
+      <h2>O que dizem as clientes</h2>
+    </div>
+    <div class="avals">
+      <figure class="aval"><span class="estrelas" aria-label="5 estrelas">★★★★★</span><p>Aqui aparece o texto de uma avaliação real do Google, do jeito que a cliente escreveu.</p><small>Nome da cliente · Google</small></figure>
+      <figure class="aval"><span class="estrelas" aria-label="5 estrelas">★★★★★</span><p>As avaliações mostram para quem visita o site que outras pessoas já confiaram no seu trabalho.</p><small>Nome da cliente · Google</small></figure>
+      <figure class="aval"><span class="estrelas" aria-label="5 estrelas">★★★★★</span><p>Escolhemos as que falam do atendimento, do ambiente e do cuidado com cada detalhe.</p><small>Nome da cliente · Google</small></figure>
+    </div>
+    <p class="obs">Textos ilustrativos. No site de cada cliente, a Findez transcreve as avaliações reais do Google.</p>
+  </div>
+</section>
+
+<section class="local" id="local">
+  <div class="wrap grade">
+    <div class="info">
+      <div>
+        <span class="rotulo">Horário e endereço</span>
+        <h2 style="font-size:clamp(1.9rem,5vw,2.4rem)">Venha nos conhecer</h2>
+      </div>
+      <div><b>Endereço</b>Rua do Exemplo, 300 — Saúde<br>São Paulo/SP</div>
+      <div><b>Horário</b>
+        <table class="horas">
+          <tr><td>Segunda a sexta</td><td>9h às 20h</td></tr>
+          <tr><td>Sábado</td><td>9h às 15h</td></tr>
+          <tr class="fechado"><td>Domingo</td><td>Fechado</td></tr>
+        </table>
+      </div>
+      <div><b>WhatsApp</b>(11) 9XXXX-XXXX</div>
+    </div>
+    <div class="mapa">
+      <iframe src="https://maps.google.com/maps?q=Sa%C3%BAde%2C%20S%C3%A3o%20Paulo&z=14&output=embed" title="Mapa da região da Saúde, São Paulo" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Reserve o seu horário</h2>
+    <p>Chame no WhatsApp e marque a sua avaliação.</p>
+    <a class="btn btn-zap" href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Vi%20o%20modelo%20de%20site%20para%20cl%C3%ADnica%20de%20est%C3%A9tica%20e%20quero%20um%20assim%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="marca"><svg aria-hidden="true"><use href="#folha"/></svg><b>Espaço Lótus</b></div>
+    <p>Negócio fictício · Rua do Exemplo, 300 — Saúde, São Paulo/SP</p>
+    <p style="margin-top:14px">Foto ilustrativa: Unsplash · Site criado por <a href="https://findezagencia.com.br" target="_blank" rel="noopener">Findez</a></p>
+  </div>
+</footer>
+
+<a class="zap-fixo" href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Vi%20o%20modelo%20de%20site%20para%20cl%C3%ADnica%20de%20est%C3%A9tica%20e%20quero%20um%20assim%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener" aria-label="Falar com a Findez no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg></a>
+</body>
+</html>

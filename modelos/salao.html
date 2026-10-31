@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modelo de site para salão de beleza | Findez</title>
+<meta name="description" content="Modelo de demonstração da Findez: site de uma página para salão de beleza, com serviços e preços, diferenciais, horário, mapa e agendamento pelo WhatsApp. Negócio e dados fictícios.">
+<!-- MODELO da Findez: negócio fictício, não indexar -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#7a4b4f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%237a4b4f'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23f6e9e4' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --vinho:#7a4b4f; --vinho-esc:#5c3639; --rose:#e9cfc8; --nude:#f6ece7; --creme:#fbf7f4;
+  --texto:#3b2a2b; --suave:#7d6a6a; --linha:#ead9d3; --zap:#1fa855;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;color:var(--texto);background:var(--creme);line-height:1.6;font-size:16px}
+img,svg{display:block;max-width:100%}
+a{color:var(--vinho)}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.15;color:var(--vinho-esc)}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.modelo{background:#D4AF37;color:#0B0B0B;font-size:.8rem;text-align:center;padding:7px 16px;font-weight:600}
+.modelo a{color:#0B0B0B}
+
+/* topo */
+header{position:sticky;top:0;z-index:20;background:rgba(251,247,244,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
+.topo{display:flex;align-items:center;justify-content:space-between;height:64px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none}
+.marca .selo{width:38px;height:38px;border-radius:50%;background:var(--vinho);color:var(--nude);display:grid;place-items:center;font-family:"Cormorant Garamond",serif;font-size:1.2rem;font-weight:600}
+.marca b{font-family:"Cormorant Garamond",serif;font-size:1.45rem;color:var(--vinho-esc);font-weight:600;letter-spacing:.02em}
+nav ul{display:none;list-style:none;gap:26px}
+nav a{text-decoration:none;color:var(--texto);font-size:.95rem}
+nav a:hover{color:var(--vinho)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:.98rem;text-decoration:none;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-zap{background:var(--zap);color:#fff}
+.btn-zap:hover{background:#178f47}
+.btn-linha{border:1.5px solid var(--vinho);color:var(--vinho);background:transparent}
+.btn-linha:hover{background:var(--vinho);color:#fff}
+.btn svg{width:20px;height:20px;fill:currentColor}
+.topo .btn{padding:9px 16px;font-size:.88rem}
+
+/* abertura */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--nude) 0%,var(--rose) 100%);padding:56px 0 64px}
+.hero .wrap{display:grid;gap:36px;align-items:center}
+.hero small{display:inline-block;text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;color:var(--vinho);font-weight:600;margin-bottom:12px}
+.hero h1{font-size:clamp(2.3rem,7vw,3.7rem);margin-bottom:16px}
+.hero h1 em{font-style:italic;color:var(--vinho)}
+.hero p.lead{font-size:1.08rem;color:#5b4647;max-width:520px;margin-bottom:24px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.nota{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:#fff;border-radius:14px;padding:10px 16px;box-shadow:0 6px 20px rgba(122,75,79,.12);color:var(--texto)}
+.nota .estrelas{color:#e3a72f;letter-spacing:2px}
+.nota b{font-size:1.25rem;color:var(--vinho-esc)}
+.nota span{font-size:.85rem;color:var(--suave)}
+.arte{max-width:420px;justify-self:center;width:100%;aspect-ratio:4/5;border-radius:200px 200px 24px 24px;overflow:hidden;box-shadow:0 20px 50px rgba(92,54,57,.18);border:6px solid #fff;background:var(--nude)}
+.arte img{width:100%;height:100%;object-fit:cover}
+
+/* seções */
+section{padding:72px 0}
+.titulo{text-align:center;max-width:620px;margin:0 auto 40px}
+.titulo small{display:block;text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;color:var(--vinho);font-weight:600;margin-bottom:8px}
+.titulo h2{font-size:clamp(1.9rem,5vw,2.6rem);margin-bottom:10px}
+.titulo p{color:var(--suave)}
+
+/* serviços */
+.servicos{display:grid;gap:20px}
+.card{background:#fff;border:1px solid var(--linha);border-radius:20px;padding:28px 24px}
+.card .icone{width:52px;height:52px;border-radius:50%;background:var(--nude);display:grid;place-items:center;margin-bottom:16px}
+.card .icone svg{width:26px;height:26px;stroke:var(--vinho);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.6rem;margin-bottom:12px}
+.card ul{list-style:none}
+.card li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed var(--linha);font-size:.98rem}
+.card li:last-child{border-bottom:0}
+.card li .preco{color:var(--suave);font-size:.88rem;white-space:nowrap}
+.nota-precos{text-align:center;margin-top:22px;font-size:.9rem;color:var(--suave)}
+
+/* diferenciais */
+.sobre{background:#fff}
+.difs{display:grid;gap:16px}
+.dif{display:flex;gap:16px;align-items:flex-start;padding:20px;border-radius:16px;background:var(--creme);border:1px solid var(--linha)}
+.dif svg{flex:none;width:30px;height:30px;stroke:var(--vinho);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.dif h3{font-family:Jost,sans-serif;font-size:1.02rem;font-weight:600;color:var(--texto);margin-bottom:2px}
+.dif p{font-size:.93rem;color:var(--suave)}
+.voz{margin:40px auto 0;max-width:720px;text-align:center;background:var(--nude);border-radius:20px;padding:30px 24px}
+.voz p{font-family:"Cormorant Garamond",serif;font-size:1.4rem;font-style:italic;color:var(--vinho-esc);line-height:1.35}
+.voz small{display:block;margin-top:12px;font-size:.85rem;color:var(--suave)}
+
+/* agendar */
+.agendar{background:linear-gradient(135deg,var(--vinho) 0%,var(--vinho-esc) 100%);color:#f6e9e4;text-align:center}
+.agendar h2{color:#fff;font-size:clamp(1.9rem,5vw,2.6rem);margin-bottom:10px}
+.agendar p{max-width:540px;margin:0 auto 26px;opacity:.9}
+.agendar .acoes{justify-content:center}
+
+/* local */
+.local .grade{display:grid;gap:24px}
+.info{background:#fff;border:1px solid var(--linha);border-radius:20px;padding:26px 24px}
+.info ul{list-style:none;display:grid;gap:18px}
+.info li{display:flex;gap:14px}
+.info li svg{flex:none;width:24px;height:24px;stroke:var(--vinho);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
+.info b{display:block;color:var(--vinho-esc)}
+.horas{width:100%;border-collapse:collapse;margin-top:4px;font-size:.95rem}
+.horas td{padding:3px 0}
+.horas td:last-child{text-align:right}
+.horas .fechado{color:var(--suave)}
+.mapa{border-radius:20px;overflow:hidden;border:1px solid var(--linha);min-height:320px;background:var(--nude)}
+.mapa iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+
+/* rodapé */
+footer{background:#2f2223;color:#cdb9b5;padding:40px 0 100px;text-align:center;font-size:.9rem}
+footer .marca{justify-content:center;margin-bottom:12px}
+footer .marca b{color:#f6e9e4}
+footer a{color:#f1d9d2}
+
+.zap-fixo{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;background:var(--zap);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.zap-fixo svg{width:30px;height:30px;fill:#fff}
+
+@media (min-width:760px){
+  nav ul{display:flex}
+  .hero{padding:80px 0 90px}
+  .hero .wrap{grid-template-columns:1.1fr .9fr}
+  .servicos{grid-template-columns:1fr 1fr}
+  .difs{grid-template-columns:1fr 1fr}
+  .local .grade{grid-template-columns:.9fr 1.1fr}
+  footer{padding-bottom:40px}
+}
+@media (min-width:1000px){.difs{grid-template-columns:repeat(3,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+:focus-visible{outline:3px solid var(--vinho);outline-offset:3px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3 1 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></symbol>
+</svg>
+
+<div class="modelo">Modelo de demonstração da Findez · negócio e dados fictícios · <a href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Vi%20o%20modelo%20de%20site%20para%20sal%C3%A3o%20de%20beleza%20e%20quero%20um%20assim%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero um site assim</a></div>
+
+<header>
+  <div class="wrap topo">
+    <a class="marca" href="#inicio" aria-label="Salão Aurora, início">
+      <span class="selo">A</span><b>Salão Aurora</b>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">O salão</a></li>
+        <li><a href="#local">Horário e endereço</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-zap" href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Vi%20o%20modelo%20de%20site%20para%20sal%C3%A3o%20de%20beleza%20e%20quero%20um%20assim%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Agendar</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <small>Salão de beleza · Moema, São Paulo</small>
+      <h1>Cabelo e unhas com <em>carinho</em> e pontualidade</h1>
+      <p class="lead">Corte, coloração, escova, manicure e pedicure num ambiente tranquilo, com horário respeitado. Agende em poucos segundos pelo WhatsApp.</p>
+      <div class="acoes">
+        <a class="btn btn-zap" href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Vi%20o%20modelo%20de%20site%20para%20sal%C3%A3o%20de%20beleza%20e%20quero%20um%20assim%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+        <a class="btn btn-linha" href="#servicos">Ver serviços</a>
+      </div>
+      <p class="nota"><b>4,8</b><span class="estrelas" aria-hidden="true">★★★★★</span><span>Nota no Google (exemplo)</span></p>
+    </div>
+    <div class="arte"><img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?auto=format&fit=crop&w=600&h=750&q=70" alt="Cabeleireira cortando o cabelo de uma cliente no salão" width="600" height="750"></div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="titulo">
+      <small>Serviços</small>
+      <h2>Tudo para você sair renovada</h2>
+      <p>Cabelo e unhas no mesmo lugar, aqui em Moema.</p>
+    </div>
+    <div class="servicos">
+      <article class="card">
+        <div class="icone"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></div>
+        <h3>Cabelo</h3>
+        <ul>
+          <li>Corte feminino <span class="preco">a partir de R$ 70</span></li>
+          <li>Escova <span class="preco">a partir de R$ 50</span></li>
+          <li>Coloração <span class="preco">a partir de R$ 120</span></li>
+          <li>Luzes e mechas <span class="preco">sob avaliação</span></li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="icone"><svg viewBox="0 0 24 24"><path d="M9 3h6v4a3 3 0 0 1-6 0V3Z"/><path d="M12 10v3"/><rect x="7" y="13" width="10" height="8" rx="2"/></svg></div>
+        <h3>Unhas</h3>
+        <ul>
+          <li>Manicure <span class="preco">a partir de R$ 35</span></li>
+          <li>Pedicure <span class="preco">a partir de R$ 40</span></li>
+          <li>Pé e mão <span class="preco">a partir de R$ 70</span></li>
+          <li>Esmaltação em gel <span class="preco">a partir de R$ 80</span></li>
+        </ul>
+      </article>
+    </div>
+    <p class="nota-precos">Preços de exemplo. No site de cada cliente, mostramos os valores que o próprio salão passar.</p>
+  </div>
+</section>
+
+<section class="sobre" id="sobre">
+  <div class="wrap">
+    <div class="titulo">
+      <small>O salão</small>
+      <h2>Por que as clientes voltam</h2>
+      <p>Os diferenciais que aparecem nas avaliações das clientes.</p>
+    </div>
+    <div class="difs">
+      <div class="dif"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><h3>Pontualidade</h3><p>Seu horário é respeitado: você chega e é atendida.</p></div></div>
+      <div class="dif"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9 5.5-.8L12 3Z"/></svg><div><h3>Produtos de qualidade</h3><p>Marcas reconhecidas para cuidar bem do seu cabelo.</p></div></div>
+      <div class="dif"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9Z"/></svg><div><h3>Ambiente aconchegante</h3><p>Um espaço tranquilo para você relaxar enquanto se cuida.</p></div></div>
+      <div class="dif"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg><div><h3>Material esterilizado</h3><p>Alicates e ferramentas esterilizados a cada atendimento.</p></div></div>
+      <div class="dif"><svg viewBox="0 0 24 24"><circle cx="8" cy="7" r="3"/><circle cx="17" cy="9" r="2"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 20c0-2.2 1.3-4 3-4s3 1.8 3 4"/></svg><div><h3>Para toda a família</h3><p>Atendimento para adultos e crianças.</p></div></div>
+      <div class="dif"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></svg><div><h3>Formas de pagamento</h3><p>Pix, cartão de crédito e débito.</p></div></div>
+    </div>
+    <div class="voz">
+      <p>Aqui entra o trecho de uma avaliação real do Google, escolhido a dedo.</p>
+      <small>Texto ilustrativo. No site de cada cliente, usamos as avaliações reais do Google.</small>
+    </div>
+  </div>
+</section>
+
+<section class="agendar">
+  <div class="wrap">
+    <h2>Que tal marcar seu horário?</h2>
+    <p>Chame no WhatsApp e escolha o melhor dia para você. Atendemos de terça a sábado.</p>
+    <div class="acoes">
+      <a class="btn btn-zap" href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Vi%20o%20modelo%20de%20site%20para%20sal%C3%A3o%20de%20beleza%20e%20quero%20um%20assim%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="local" id="local">
+  <div class="wrap">
+    <div class="titulo">
+      <small>Horário e endereço</small>
+      <h2>Venha nos visitar em Moema</h2>
+      <p>Aqui entram as referências do bairro, como uma praça ou estação de metrô próxima.</p>
+    </div>
+    <div class="grade">
+      <div class="info">
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <span><b>Endereço</b>Rua do Exemplo, 200 — Moema<br>São Paulo/SP</span></li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <span style="flex:1"><b>Horário de funcionamento</b>
+              <table class="horas">
+                <tr><td>Terça a sexta</td><td>9h às 20h</td></tr>
+                <tr><td>Sábado</td><td>9h às 18h</td></tr>
+                <tr class="fechado"><td>Domingo e segunda</td><td>Fechado</td></tr>
+              </table>
+            </span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+            <span><b>Telefone e WhatsApp</b>(11) 9XXXX-XXXX</span></li>
+        </ul>
+      </div>
+      <div class="mapa">
+        <iframe src="https://maps.google.com/maps?q=Moema%2C%20S%C3%A3o%20Paulo&z=14&output=embed" title="Mapa da região de Moema, São Paulo" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="marca"><span class="selo">A</span><b>Salão Aurora</b></div>
+    <p>Negócio fictício · Rua do Exemplo, 200 — Moema, São Paulo/SP</p>
+    <p style="margin-top:14px">Foto ilustrativa: Unsplash · Site criado por <a href="https://findezagencia.com.br" target="_blank" rel="noopener">Findez</a></p>
+  </div>
+</footer>
+
+<a class="zap-fixo" href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Vi%20o%20modelo%20de%20site%20para%20sal%C3%A3o%20de%20beleza%20e%20quero%20um%20assim%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener" aria-label="Falar com a Findez no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg></a>
+</body>
+</html>
