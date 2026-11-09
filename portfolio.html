@@ -134,6 +134,13 @@ nav .btn:hover{color:var(--preto)}
 }
 
 /* O que todo site tem */
+.real{padding:88px 0;border-top:1px solid var(--linha)}
+.real-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.real-grid img{display:block;width:100%;height:auto;border-radius:20px;border:1px solid var(--linha)}
+.real-tipo{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ouro);margin-bottom:12px}
+.real-grid p{margin-top:16px}
+.real .modelo-acoes{margin-top:28px}
+@media (max-width:760px){.real-grid{grid-template-columns:1fr;gap:28px}.real{padding:64px 0}}
 .inclui{padding:88px 0;border-top:1px solid var(--linha)}
 .inclui h2{margin-bottom:40px}
 .inclui-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--linha);border-left:1px solid var(--linha)}
@@ -296,6 +303,20 @@ footer{border-top:1px solid var(--linha);padding:48px 0 40px;font-size:14px;colo
           <a class="btn btn-linha" href="modelos/estetica.html" target="_blank" rel="noopener">Abrir em tela cheia</a>
         </div>
         <p class="paleta" aria-label="Cores do modelo: verde sálvia, areia e off-white"><span style="background:#4f6b5c"></span><span style="background:#f4efe6"></span><span style="background:#fbf9f5"></span>Verde sálvia, areia e off-white</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="real" id="site-real" aria-labelledby="t-real">
+    <div class="wrap real-grid">
+      <a href="https://serendipitycampos.com.br/" target="_blank" rel="noopener"><img src="serendipity.webp" width="960" height="428" alt="Varanda envidraçada da casa Serendipity, com vista para as araucárias da Serra da Mantiqueira" loading="lazy" decoding="async"></a>
+      <div>
+        <p class="real-tipo">Site real no ar · projeto próprio</p>
+        <h2 id="t-real">Serendipity, casa de temporada em Campos do Jordão</h2>
+        <p>Este não é um site de cliente: é a casa de temporada do próprio Matheus, criador da Findez. O site está no ar, no domínio próprio, com galeria de fotos, preços das diárias, regras da casa e botão de reserva pelo WhatsApp.</p>
+        <div class="modelo-acoes">
+          <a class="btn btn-linha" href="https://serendipitycampos.com.br/" target="_blank" rel="noopener">Ver o site no ar</a>
+        </div>
       </div>
     </div>
   </section>

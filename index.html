@@ -71,6 +71,18 @@
           },
           {
             "@type": "Offer",
+            "name": "Presença Ativa",
+            "description": "Plano mensal para quem já tem o site da Findez: manutenção do site, 1 post por semana no Perfil da Empresa no Google, resposta às avaliações, 12 posts para o Instagram e resumo mensal.",
+            "priceCurrency": "BRL",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "197.00",
+              "priceCurrency": "BRL",
+              "unitCode": "MON"
+            }
+          },
+          {
+            "@type": "Offer",
             "name": "Google Perfil completo",
             "price": "299.00",
             "priceCurrency": "BRL"
@@ -316,6 +328,18 @@ section,#inicio{scroll-margin-top:84px}
 .mensal-valor span{font-family:var(--sans);font-size:14px;color:var(--texto);margin-left:4px}
 .preco-texto{font-size:15px;margin-top:16px}
 .preco-texto.suave{font-size:14px;color:var(--texto-suave)}
+.fundador{margin-bottom:26px;padding:16px 18px;border:1px dashed var(--ouro);border-radius:14px;background:rgba(212,175,55,.08)}
+.fundador-selo{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ouro)}
+.fundador-valor{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--branco);line-height:1.1;margin-top:8px}
+.fundador-texto{font-size:14px;margin-top:8px}
+.plano-ativo{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;margin-top:24px;padding:32px 36px;border:1px solid var(--ouro-escuro);border-radius:20px;background:#0e0e0e}
+.plano-ativo h3{font-size:26px;margin-top:8px}
+.plano-ativo p{font-size:15px;margin-top:10px;max-width:60ch}
+.plano-ativo .preco{font-family:var(--serif);color:var(--branco);font-size:38px;font-weight:700;line-height:1;margin-top:0}
+.plano-ativo .preco small{font-family:var(--sans);font-size:15px;font-weight:500;color:var(--ouro);margin-left:2px}
+.plano-ativo .obs{font-size:13px;color:var(--texto-suave);margin-top:8px;max-width:26ch}
+.plano-ativo a{display:inline-block;margin-top:14px;font-size:15px;font-weight:600;color:var(--ouro);text-decoration:underline;text-decoration-color:var(--ouro-escuro);text-underline-offset:5px}
+@media (max-width:760px){.plano-ativo{grid-template-columns:1fr;gap:20px;padding:28px 22px}}
 @media (max-width:440px){.valor{font-size:52px}.mensal-valor span{display:block;margin:2px 0 0}}
 .btn-cheio{justify-content:center;margin-top:28px}
 @media (max-width:900px){
@@ -564,7 +588,12 @@ footer{border-top:1px solid var(--linha);padding:48px 0 40px;font-size:14px;colo
           <p class="prazo">Entrega do site em até 5 dias úteis.</p>
         </div>
         <div class="pacote-preco">
-          <p class="preco-rotulo">Pagamento único, à vista no Pix</p>
+          <div class="fundador">
+            <p class="fundador-selo">Cliente fundador · 3 vagas até 30/11</p>
+            <p class="fundador-valor">R$ 1.199 no Pix</p>
+            <p class="fundador-texto">ou 12x de R$ 116,58 no cartão. Em troca, o seu site entra no portfólio da Findez. Se não quiser publicar o site pronto, devolvemos 100% do valor em até 7 dias.</p>
+          </div>
+          <p class="preco-rotulo">Preço normal, à vista no Pix</p>
           <p class="valor"><small>R$</small>1.499</p>
           <p class="parcelado">ou R$ 1.699 no cartão de crédito, em até 12x de R$ 141,58</p>
           <div class="mensal">
@@ -573,6 +602,18 @@ footer{border-top:1px solid var(--linha);padding:48px 0 40px;font-size:14px;colo
           </div>
           <p class="preco-texto suave">O domínio é registrado no nome do seu negócio e pago à parte. Páginas extras, loja virtual, blog e anúncios são combinados separadamente.</p>
           <a class="btn btn-ouro btn-cheio" href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Quero%20uma%20pr%C3%A9via%20gr%C3%A1tis%20e%20saber%20mais%20sobre%20o%20Presen%C3%A7a%20Digital%20Express." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Ver como ficaria o meu site</a>
+        </div>
+      </div>
+      <div class="plano-ativo" id="presenca-ativa">
+        <div>
+          <p class="servico-tipo">Mensal · para quem já tem o site da Findez</p>
+          <h3>Presença Ativa</h3>
+          <p>Seu site, seu Google e seu Instagram cuidados todo mês: manutenção do site, 1 post por semana no Perfil do Google, resposta às avaliações, 12 posts para o Instagram e um resumo mensal do que foi feito.</p>
+        </div>
+        <div class="plano-ativo-preco">
+          <p class="preco">R$ 197<small>/mês</small></p>
+          <p class="obs">Sem fidelidade. Substitui a manutenção de R$ 29,99.</p>
+          <a href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20plano%20Presen%C3%A7a%20Ativa%20da%20Findez." target="_blank" rel="noopener">Pedir no WhatsApp</a>
         </div>
       </div>
       <div class="avulsos" id="servicos">
