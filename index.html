@@ -64,58 +64,21 @@
         "itemListElement": [
           {
             "@type": "Offer",
-            "name": "Presença Digital Express",
-            "description": "Site de uma página, Perfil da Empresa no Google e 30 posts para o Instagram. R$ 1.499 no Pix ou R$ 1.699 no cartão de crédito em até 12x, mais manutenção de R$ 29,99 por mês.",
-            "price": "1499.00",
-            "priceCurrency": "BRL"
-          },
-          {
-            "@type": "Offer",
-            "name": "Presença Ativa",
-            "description": "Plano mensal para quem já tem o site da Findez: manutenção do site, 1 post por semana no Perfil da Empresa no Google, resposta às avaliações, 12 posts para o Instagram e resumo mensal.",
-            "priceCurrency": "BRL",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "197.00",
-              "priceCurrency": "BRL",
-              "unitCode": "MON"
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Google Perfil completo",
-            "price": "299.00",
-            "priceCurrency": "BRL"
+            "name": "Google Perfil completo"
           },
           {
             "@type": "Offer",
             "name": "Artes e posts mensais do Instagram",
-            "description": "3 posts por semana.",
-            "priceCurrency": "BRL",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "99.00",
-              "priceCurrency": "BRL",
-              "unitCode": "MON"
-            }
+            "description": "3 posts por semana."
           },
           {
             "@type": "Offer",
-            "name": "Site avulso",
-            "price": "999.00",
-            "priceCurrency": "BRL",
-            "description": "Site profissional de uma página. Manutenção de R$ 39 por mês."
+            "name": "Site profissional",
+            "description": "Site profissional de uma página."
           },
           {
             "@type": "Offer",
-            "name": "Secretária de WhatsApp com IA",
-            "priceCurrency": "BRL",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "1499.00",
-              "priceCurrency": "BRL",
-              "unitCode": "MON"
-            }
+            "name": "Secretária de WhatsApp com IA"
           }
         ]
       }
@@ -175,10 +138,10 @@
         },
         {
           "@type": "Question",
-          "name": "Como é feito o pagamento?",
+          "name": "Quanto custa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Por Pix ou cartão."
+            "text": "Depende do que o seu negócio precisa. Você recebe o orçamento pelo WhatsApp junto com a prévia grátis. Aceitamos Pix e cartão."
           }
         }
       ]
@@ -308,10 +271,13 @@ section,#inicio{scroll-margin-top:84px}
 @media (max-width:860px){.problema-grid{grid-template-columns:1fr;gap:36px}}
 
 /* Pacote */
-.pacote{display:grid;grid-template-columns:1.15fr .85fr;border:1px solid var(--ouro-escuro);border-radius:24px;overflow:hidden;background:#0e0e0e}
+.pacote{display:grid;grid-template-columns:1fr;border:1px solid var(--ouro-escuro);border-radius:24px;overflow:hidden;background:#0e0e0e}
 .pacote-itens{padding:44px}
 .pacote-itens h3{font-size:28px}
-.itens{list-style:none;margin-top:26px;display:grid;gap:16px}
+.itens{list-style:none;margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:16px 40px}
+.pacote-obs{font-size:14px;color:var(--texto-suave);margin-top:10px}
+.btn-pacote{margin-top:24px}
+@media (max-width:760px){.itens{grid-template-columns:1fr}}
 .itens li{display:flex;gap:12px;font-size:16px}
 .itens strong{color:var(--branco);font-weight:600}
 .itens svg{width:20px;height:20px;color:var(--ouro);flex:none;margin-top:3px}
@@ -364,6 +330,48 @@ section,#inicio{scroll-margin-top:84px}
 }
 @media (max-width:440px){.exemplos{margin:0 -20px;padding:4px 20px 16px}}
 
+/* Antes e depois do Google Perfil */
+.ad-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:8px}
+.ad-col{display:flex;flex-direction:column;gap:14px}
+.ad-tag{align-self:flex-start;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:5px 14px}
+.ad-tag.antes{color:var(--texto);border:1px solid var(--linha);background:var(--superficie)}
+.ad-tag.depois{color:var(--preto);background:var(--ouro)}
+.gp{background:#fff;color:#202124;border-radius:18px;padding:20px;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.45;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.gp.depois{box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 0 2px var(--ouro)}
+.gp-fotos{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4px;height:118px;border-radius:12px;overflow:hidden;margin-bottom:14px}
+.gp-fotos span{display:flex;align-items:flex-end;padding:6px 8px;font-size:11px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.5)}
+.gp-fotos span:nth-child(1){background:linear-gradient(135deg,#7a4b2a,#2e1d12)}
+.gp-fotos span:nth-child(2){background:linear-gradient(135deg,#b08a5a,#5b3f24)}
+.gp-fotos span:nth-child(3){background:linear-gradient(135deg,#3d4a55,#1b2229)}
+.gp-semfoto{height:118px;border-radius:12px;margin-bottom:14px;background:#f1f3f4;display:grid;place-items:center;color:#80868b;font-size:13px}
+.gp h4{font-family:Arial,Helvetica,sans-serif;font-size:21px;font-weight:400;color:#202124;line-height:1.25}
+.gp p{max-width:none}
+.gp-nota{color:#4d5156;font-size:13px;margin-top:2px}
+.gp-nota b{color:#202124;font-weight:400}
+.gp-estrelas{color:#fbbc04;letter-spacing:1px}
+.gp-acoes{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 4px}
+.gp-acoes span{border:1px solid #dadce0;border-radius:999px;padding:6px 12px;font-size:13px;color:#1a73e8}
+.gp-acoes span.wa{background:#e6f4ea;border-color:#b7dfc1;color:#137333}
+.gp-linhas{list-style:none;margin-top:10px;border-top:1px solid #ecedef}
+.gp-linhas li{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid #ecedef;font-size:13px;color:#3c4043}
+.gp-linhas i{font-style:normal;width:18px;flex:none;text-align:center;color:#5f6368}
+.gp-linhas .falta{color:#9aa0a6}
+.gp-linhas .aberto{color:#188038}
+.gp-linhas .link{color:#1a0dab}
+.gp-chips{display:flex;flex-wrap:wrap;gap:6px}
+.gp-chips span{background:#f1f3f4;border-radius:6px;padding:2px 8px;font-size:12px}
+.gp-post{margin-top:12px;padding:10px 12px;border-radius:10px;background:#f8f9fa;font-size:13px;color:#3c4043}
+.gp-post small{display:block;font-size:11px;color:#5f6368;margin-bottom:2px}
+.gp-resposta{display:block;margin:6px 0 0 4px;padding-left:10px;border-left:2px solid #dadce0;color:#5f6368;font-size:12px}
+.gp-resposta.falta{color:#9aa0a6;font-style:italic}
+.ad-legenda{margin-top:18px;font-size:13px;color:var(--texto-suave)}
+.ad-lista{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:14px 28px;margin-top:40px}
+.ad-lista li{display:flex;gap:10px;font-size:15px}
+.ad-lista svg{width:20px;height:20px;color:var(--ouro);flex:none;margin-top:3px}
+.ad-lista strong{color:var(--branco);font-weight:600}
+@media (max-width:900px){.ad-lista{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){.ad-grid{grid-template-columns:1fr;gap:36px}.ad-lista{grid-template-columns:1fr}}
+
 /* Etapas */
 .etapas{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);counter-reset:etapa}
 .etapas li{padding:0 28px 0 0;position:relative;counter-increment:etapa}
@@ -375,8 +383,9 @@ section,#inicio{scroll-margin-top:84px}
 @media (max-width:900px){.etapas{grid-template-columns:1fr 1fr;gap:40px}.etapas li::after{display:none}}
 @media (max-width:560px){.etapas{grid-template-columns:1fr}}
 
-/* Serviços avulsos (dentro de Planos) */
+/* Serviços avulsos */
 .avulsos{margin-top:64px}
+.avulsos-sozinho{margin-top:0}
 .avulsos h3{font-size:28px}
 .avulsos-intro{font-size:16px;margin:8px 0 28px}
 .servicos{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -462,7 +471,7 @@ footer{border-top:1px solid var(--linha);padding:48px 0 40px;font-size:14px;colo
       <ul id="menu">
         <li><a href="#exemplos">Exemplos</a></li>
         <li><a href="#como-funciona">Como funciona</a></li>
-        <li><a href="#pacote">Planos</a></li>
+        <li><a href="#pacote">Serviços</a></li>
         <li><a href="#sobre">Quem somos</a></li>
         <li><a href="#duvidas">Dúvidas</a></li>
         <li><a class="btn btn-ouro" href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Findez%20e%20quero%20uma%20pr%C3%A9via%20gr%C3%A1tis%20do%20site%20do%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Falar no WhatsApp</a></li>
@@ -551,6 +560,60 @@ footer{border-top:1px solid var(--linha);padding:48px 0 40px;font-size:14px;colo
     </div>
   </section>
 
+  <section id="antes-depois">
+    <div class="wrap">
+      <div class="intro-secao">
+        <h2>Antes e depois no Google</h2>
+        <p>Veja a diferença entre um perfil esquecido e um perfil cuidado pela Findez. É isso que o cliente vê quando procura o seu negócio.</p>
+      </div>
+      <div class="ad-grid">
+        <div class="ad-col">
+          <p class="ad-tag antes">Antes</p>
+          <div class="gp antes" role="img" aria-label="Exemplo de perfil no Google antes da Findez: sem fotos, sem site, sem horário, sem serviços e com avaliação sem resposta">
+            <div class="gp-semfoto">Nenhuma foto adicionada</div>
+            <h4>Barbearia Exemplo</h4>
+            <p class="gp-nota"><b>4,7</b> <span class="gp-estrelas">★★★★★</span> (38) · Barbearia</p>
+            <div class="gp-acoes"><span>Rotas</span><span>Ligar</span></div>
+            <ul class="gp-linhas">
+              <li><i>⌖</i><span>Rua Exemplo, 100</span></li>
+              <li><i>◷</i><span class="falta">Adicionar horário</span></li>
+              <li><i>⊕</i><span class="falta">Adicionar site</span></li>
+              <li><i>☰</i><span class="falta">Nenhum serviço informado</span></li>
+              <li><i>✎</i><span class="falta">Nenhuma atualização publicada</span></li>
+            </ul>
+            <div class="gp-post"><small>Avaliação · há 2 meses</small>&ldquo;Ótimo corte, recomendo!&rdquo;<span class="gp-resposta falta">Sem resposta do proprietário</span></div>
+          </div>
+        </div>
+        <div class="ad-col">
+          <p class="ad-tag depois">Depois, com a Findez</p>
+          <div class="gp depois" role="img" aria-label="Exemplo do mesmo perfil no Google depois da Findez: com fotos, site, botão de WhatsApp, horário, serviços, atualização recente e avaliação respondida">
+            <div class="gp-fotos" aria-hidden="true"><span>Fachada</span><span>Ambiente</span><span>Cortes</span></div>
+            <h4>Barbearia Exemplo</h4>
+            <p class="gp-nota"><b>4,7</b> <span class="gp-estrelas">★★★★★</span> (38) · Barbearia em Vila Mariana</p>
+            <div class="gp-acoes"><span>Site</span><span>Rotas</span><span>Ligar</span><span class="wa">WhatsApp</span></div>
+            <ul class="gp-linhas">
+              <li><i>⌖</i><span>Rua Exemplo, 100 · Vila Mariana, São Paulo</span></li>
+              <li><i>◷</i><span><span class="aberto">Aberto</span> · Fecha às 20:00</span></li>
+              <li><i>⊕</i><span class="link">barbeariaexemplo.com.br</span></li>
+              <li><i>☰</i><span class="gp-chips"><span>Corte</span><span>Barba</span><span>Sobrancelha</span><span>Pigmentação</span></span></li>
+            </ul>
+            <div class="gp-post"><small>Atualização do proprietário · há 3 dias</small>Agenda aberta para o sábado! Chame no WhatsApp e garanta o seu horário.</div>
+            <div class="gp-post"><small>Avaliação · há 2 meses</small>&ldquo;Ótimo corte, recomendo!&rdquo;<span class="gp-resposta">Resposta do proprietário: Obrigado pela visita! Volte sempre.</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="ad-legenda">Exemplo ilustrativo, com negócio e dados fictícios. Não é um resultado real nem garantia de posição no Google.</p>
+      <ul class="ad-lista">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>Fotos</strong> da fachada, do ambiente e do trabalho</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>Site e WhatsApp</strong> a um toque do cliente</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>Horário, endereço e bairro</strong> completos</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>Serviços</strong> listados do jeito que o cliente procura</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>Posts recentes</strong>, mostrando que o negócio está ativo</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>Avaliações respondidas</strong> com educação e cuidado</span></li>
+      </ul>
+    </div>
+  </section>
+
   <section id="como-funciona">
     <div class="wrap">
       <div class="intro-secao">
@@ -561,7 +624,7 @@ footer{border-top:1px solid var(--linha);padding:48px 0 40px;font-size:14px;colo
         <li><h3>Prévia grátis</h3><p>Montamos uma prévia do seu site com as informações públicas do seu negócio e mandamos para você ver.</p></li>
         <li><h3>Você decide</h3><p>Se gostar, combinamos os ajustes. Se não gostar, tudo bem: não há nenhum compromisso.</p></li>
         <li><h3>Site no ar</h3><p>Em até 5 dias úteis o site está pronto e publicado no seu domínio.</p></li>
-        <li><h3>Google e Instagram</h3><p>Organizamos o seu Google Perfil e entregamos os 30 posts prontos para publicar.</p></li>
+        <li><h3>Google e Instagram</h3><p>Se quiser, também organizamos o seu Google Perfil e preparamos os posts do Instagram.</p></li>
       </ol>
     </div>
   </section>
@@ -569,86 +632,30 @@ footer{border-top:1px solid var(--linha);padding:48px 0 40px;font-size:14px;colo
   <section id="pacote">
     <div class="wrap">
       <div class="intro-secao">
-        <h2>Planos</h2>
-        <p>Escolha o pacote completo ou só a parte que o seu negócio precisa. Em todos, você vê a prévia antes de pagar.</p>
+        <h2>Serviços</h2>
+        <p>Escolha o que o seu negócio precisa. Você vê a prévia grátis antes de decidir.</p>
       </div>
-      <div class="pacote">
-        <div class="pacote-itens">
-          <p class="plano-selo">Mais completo</p>
-          <h3>Presença Digital Express</h3>
-          <p class="plano-resumo">Site, Google Perfil e Instagram: tudo o que o cliente precisa para encontrar você e chamar no WhatsApp.</p>
-          <ul class="itens">
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>Site profissional de uma página</strong>, feito para funcionar bem no celular</span></li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>Botão direto para o seu WhatsApp</strong> em todo o site</span></li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>Serviços, localização com mapa e horário</strong> do seu negócio</span></li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>Site no seu próprio domínio</strong>, com estrutura preparada para o Google</span></li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>Perfil da Empresa no Google</strong> criado ou completo</span></li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>30 posts para o seu Instagram</strong>, com arte e legenda</span></li>
-          </ul>
-          <p class="prazo">Entrega do site em até 5 dias úteis.</p>
-        </div>
-        <div class="pacote-preco">
-          <div class="fundador">
-            <p class="fundador-selo">Cliente fundador · 3 vagas até 30/11</p>
-            <p class="fundador-valor">R$ 1.199 no Pix</p>
-            <p class="fundador-texto">ou 12x de R$ 116,58 no cartão. Em troca, o seu site entra no portfólio da Findez. Se não quiser publicar o site pronto, devolvemos 100% do valor em até 7 dias.</p>
-          </div>
-          <p class="preco-rotulo">Preço normal, à vista no Pix</p>
-          <p class="valor"><small>R$</small>1.499</p>
-          <p class="parcelado">ou R$ 1.699 no cartão de crédito, em até 12x de R$ 141,58</p>
-          <div class="mensal">
-            <p class="preco-rotulo">Depois da entrega, todo mês</p>
-            <p class="mensal-valor">R$ 29,99<span>/mês de manutenção do site</span></p>
-          </div>
-          <p class="preco-texto suave">O domínio é registrado no nome do seu negócio e pago à parte. Páginas extras, loja virtual, blog e anúncios são combinados separadamente.</p>
-          <a class="btn btn-ouro btn-cheio" href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Quero%20uma%20pr%C3%A9via%20gr%C3%A1tis%20e%20saber%20mais%20sobre%20o%20Presen%C3%A7a%20Digital%20Express." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Ver como ficaria o meu site</a>
-        </div>
-      </div>
-      <div class="plano-ativo" id="presenca-ativa">
-        <div>
-          <p class="servico-tipo">Mensal · para quem já tem o site da Findez</p>
-          <h3>Presença Ativa</h3>
-          <p>Seu site, seu Google e seu Instagram cuidados todo mês: manutenção do site, 1 post por semana no Perfil do Google, resposta às avaliações, 12 posts para o Instagram e um resumo mensal do que foi feito.</p>
-        </div>
-        <div class="plano-ativo-preco">
-          <p class="preco">R$ 197<small>/mês</small></p>
-          <p class="obs">Sem fidelidade. Substitui a manutenção de R$ 29,99.</p>
-          <a href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20plano%20Presen%C3%A7a%20Ativa%20da%20Findez." target="_blank" rel="noopener">Pedir no WhatsApp</a>
-        </div>
-      </div>
-      <div class="avulsos" id="servicos">
-        <h3>Serviços avulsos</h3>
-        <p class="avulsos-intro">Para quem precisa só de uma parte, ou quer ir além do pacote.</p>
+      <div class="avulsos avulsos-sozinho" id="servicos">
         <div class="servicos">
           <div class="servico">
-            <p class="servico-tipo">Pagamento único</p>
+            <h4>Site profissional</h4>
+            <p>Site de uma página, feito para o celular, no seu domínio, com mapa, horário e botão para o WhatsApp.</p>
+            <a href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20site%20profissional%20da%20Findez." target="_blank" rel="noopener">Pedir orçamento no WhatsApp</a>
+          </div>
+          <div class="servico">
             <h4>Google Perfil completo</h4>
-            <p class="preco">R$ 299</p>
             <p>Criação ou revisão do seu perfil no Google: categorias, serviços, descrição, horário, fotos e link para o WhatsApp.</p>
-            <a href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Quero%20o%20servi%C3%A7o%20Google%20Perfil%20completo%20da%20Findez." target="_blank" rel="noopener">Pedir no WhatsApp</a>
+            <a href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Quero%20o%20servi%C3%A7o%20Google%20Perfil%20completo%20da%20Findez." target="_blank" rel="noopener">Pedir orçamento no WhatsApp</a>
           </div>
           <div class="servico">
-            <p class="servico-tipo">Mensal</p>
             <h4>Posts do Instagram</h4>
-            <p class="preco">R$ 99<small>/mês</small></p>
             <p>Três posts por semana, com arte e legenda, prontos para publicar no seu Instagram.</p>
-            <a href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Quero%20saber%20sobre%20as%20artes%20e%20posts%20mensais%20do%20Instagram." target="_blank" rel="noopener">Pedir no WhatsApp</a>
+            <a href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Quero%20saber%20sobre%20as%20artes%20e%20posts%20mensais%20do%20Instagram." target="_blank" rel="noopener">Pedir orçamento no WhatsApp</a>
           </div>
           <div class="servico">
-            <p class="servico-tipo">Pagamento único + mensal</p>
-            <h4>Site avulso</h4>
-            <p class="preco">R$ 999</p>
-            <p class="obs">+ R$ 39/mês de manutenção</p>
-            <p>Só o site profissional de uma página, no seu domínio, com botão para o WhatsApp.</p>
-            <a href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20site%20avulso%20da%20Findez." target="_blank" rel="noopener">Pedir no WhatsApp</a>
-          </div>
-          <div class="servico">
-            <p class="servico-tipo">Mensal</p>
             <h4>Secretária de WhatsApp com IA</h4>
-            <p class="preco">R$ 1.499<small>/mês</small></p>
             <p>Atendimento automático no seu WhatsApp que responde dúvidas sobre serviços, horários e localização a qualquer hora, e passa a conversa para você quando precisa.</p>
-            <p class="obs">Taxas cobradas pela Meta por mensagem, quando houver, não estão incluídas.</p>
-            <a href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Quero%20saber%20sobre%20a%20secret%C3%A1ria%20de%20WhatsApp%20com%20IA." target="_blank" rel="noopener">Pedir no WhatsApp</a>
+            <a href="https://wa.me/5511989118627?text=Ol%C3%A1!%20Quero%20saber%20sobre%20a%20secret%C3%A1ria%20de%20WhatsApp%20com%20IA." target="_blank" rel="noopener">Pedir orçamento no WhatsApp</a>
           </div>
         </div>
       </div>
@@ -687,7 +694,7 @@ footer{border-top:1px solid var(--linha);padding:48px 0 40px;font-size:14px;colo
         <details><summary>Quanto do meu tempo vou precisar?</summary><p>Uns 15 minutos para conferir as informações e aprovar os textos. O resto é com a Findez.</p></details>
         <details><summary>A prévia grátis tem algum compromisso?</summary><p>Não. A prévia serve para você ver como ficaria. Ela não é publicada no seu nome e você só paga se decidir seguir.</p></details>
         <details><summary>O domínio fica no meu nome?</summary><p>Sim. O domínio é registrado no nome do seu negócio e é seu. A Findez orienta a compra e cuida da configuração.</p></details>
-        <details><summary>Como é feito o pagamento?</summary><p>Por Pix ou cartão.</p></details>
+        <details><summary>Quanto custa?</summary><p>Depende do que o seu negócio precisa. Você recebe o orçamento pelo WhatsApp junto com a prévia grátis. Aceitamos Pix e cartão.</p></details>
       </div>
     </div>
   </section>
@@ -722,8 +729,7 @@ footer{border-top:1px solid var(--linha);padding:48px 0 40px;font-size:14px;colo
         <h2>Navegação</h2>
         <ul>
           <li><a href="#exemplos">Exemplos de site</a></li>
-          <li><a href="#pacote">Presença Digital Express</a></li>
-          <li><a href="#servicos">Serviços avulsos</a></li>
+          <li><a href="#pacote">Serviços</a></li>
           <li><a href="portfolio.html">Modelos de site por ramo</a></li>
           <li><a href="politica-de-privacidade.html">Política de privacidade</a></li>
         </ul>
